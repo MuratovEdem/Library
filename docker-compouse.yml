@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:14.8-alpine3.18
+    environment:
+      POSTGRES_DB: "library_db"
+      POSTGRES_USER: "library_user"
+      POSTGRES_PASSWORD: "library_pass"
+    ports:
+      - "5433:5432"
+
+  postgres_test:
+    image: postgres:14.8-alpine3.18
+    environment:
+      POSTGRES_DB: "library_db_test"
+      POSTGRES_USER: "library_user_test"
+      POSTGRES_PASSWORD: "library_pass_test"
+    ports:
+      - "5434:5432"

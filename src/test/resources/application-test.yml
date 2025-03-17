@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Library
+  datasource:
+    url: jdbc:postgresql://localhost:5434/library_db_test
+    username: library_user_test
+    password: library_pass_test
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
